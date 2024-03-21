@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>What is React?</title>
+	<meta name="description" content="React is a front-end library for building user interfaces, while ASP.NET Core Web API is a back-end framework for creating web services." />
+    <meta name="keywords" content="React, React with ASP.NET Core, React free hosting" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+<!--
+:::::Header Section
+-->
+<!-- <div class="nav-bar11"> -->
+    <header class="position-fixed w-100 inner_banner " id="header">
+        <div class="container position-relative ">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100 ">
+                  <div class="container  position-relative justify-content-md-end justify-content-sm-between align-items-sm-center">
+                    <a class="navbar-brand my-auto" href="index.html">
+                        <div class="d-md-none d-block">
+                            <img src="images/logo1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="navbar-brand-img d-md-block d-none">
+                            <img src="images/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </a>
+                      <button class="navbar-toggler toggle transition" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </button>
+                    <div class="collapse navbar-collapse flex-md-column" id="navbarCollapse">
+                        <ul class="navbar-nav ms-auto navbar-light">
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="asp-net-core-guide.html">ASP.NET Core</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link " href="blazor.html">Blazor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">React</a>
+                            </li>
+                              
+                              <li class="nav-item">
+                                  <a class="nav-link">Angular</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Vue</a>
+                              </li>	
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                              </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    
+            <div class="login transition position-absolute">
+                <a href="index.html" class="btn border-0 transition btn-primary createSite">Create Free Site</a>
+            </div>
+            
+        </div>
+    </header>
+<!-- </div> -->
+
+<div class="sidebar_area blazor_page">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left_nav">
+					<ul>
+						<li><a class="active" href="blazor.html"> <i class="bi bi-layout-text-window-reverse"></i>What is React</a></li>
+					</ul>
+				</div>
+				<!--<div id="accordion" class="d-lg-none d-block other">
+  <div class="card  border-0 bg-transparent">
+    <div class="card-header  p-0" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link bg-transparent w-100 text-start border-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          See Other Menu
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <div class="left_nav">
+					<ul>
+						<li><a class="text-white wh_border" href="blazor.html"><img src="images/asp.png" class="img-fluid" alt="">Blazor For Beginners</a></li>
+						
+					</ul>
+				</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>-->
+			</div>
+			<div class="col-lg-9 srt">
+				<div class="pb-4">
+					<h1>React: For Absolute Beginners</h1>
+					<div class="clearfix">
+						<img src="images/wr2 1 (1).png" class="img-fluid" alt="">
+						
+	<p>React is a JavaScript library for building user interfaces React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, Today, front-end frameworks and libraries are becoming an essential part of the modern web development stack. React.js is a front-end library that has gradually become the go-to framework for modern web development within the JavaScript community.</p>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="row">
+		
+		<div class="col-sm-12 srt">
+				<div class="pb-4">
+					<h1>What is React</h1>
+					<div class="clearfix">
+						
+	<p>React or React.js is an open-source JavaScript library developed by Meta (formerly Facebook). It was first released in 2013 and has since gained immense popularity in the web development community. React is primarily used for building dynamic and interactive user interfaces for web applications. Its main focus is on the UI layer of an application, making it the perfect choice for creating single-page applications (SPAs) and mobile apps. And also it is getting very popular for creating interactive UIs for ASP.NET Core backend applications. React and ASP.NET Core Web API are two powerful technologies for building web applications. React is a front-end library for building user interfaces, while ASP.NET Core Web API is a back-end framework for creating web services. Together, they can be used to create robust and scalable web applications.</p>
+
+
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div class="row">
+		<div class="col-md-4 col-sm-12 col-g-4 ">
+		  <div class="blazor_box ">
+		    <img src="images/vr1 1 (1).png"/>
+			<h3>Virtual DOM</h3>
+			<p>React uses Virtual DOM (Document Object Model) to efficiently update and render changes in the UI. This leads to better performance and a smoother user experience.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		   <div class="blazor_box">
+		    <img src="images/co1 1.png"/>
+			<h3>Component Based Architecture</h3>
+			<p>React encourages a modular approach to building UIs by breaking down the interface into reusable components. This makes it easier to manage and scale complex applications.</p>
+		  </div>
+		</div>
+		<div class="col-md-4 col-sm-12">
+			<div class="blazor_box">
+		    <img src="images/rf1 1.png"/>
+			<h3>React Forms</h3>
+			<p>Forms are a fundamental part of web applications, and React provides a straightforward way to handle user input using controlled components.</p>
+		  </div>
+		</div>
+	  </div>
+		
+		
+	</div>
+</div>
+
+<div class="code_area blazor_code">
+	<div class="container">
+	    <h2>JSX</h2>
+		<p>One of the defining features of React is JSX, which stands for JavaScript XML. JSX is a syntax-extension for JavaScript that allows us to write HTML like code within your JavaScript files. This syntax makes it easier to define and render UI components.</p>
+        <p>Here's a simple example of JSX</p>
+		
+		<div class="code">
+			 <span class="skytxt">const</span> <span>element</span>
+
+			<span class="redtext"><</span>h1<span class="redtext">></span>Hello, React <span class="redtext">!<</span>/h1<span class="redtext">></span>
+	
+		</div>
+		<p>In this code snippet, we define a variable element that contains JSX code. This JSX code represents an HTML element with the text "Hello, React!".</p>
+        <p>JSX makes it more intuitive to create and visualize the structure of your UI components. Under the hood, JSX is transformed into regular JavaScript code by tools like Babel React before it's rendered in the browser.</p>
+
+		<h2>React Components</h2>
+		<p>At the core of React development are components. React Components are building blocks of React application, representing different parts of the user interface. These can be as simple as a button or as complex as an entire page. React components can be categorized into two main types: React Functional Components and React Class Component. In recent versions of React (specifically, React 16.8 and later), functional components are more commonly used because they allow developers to use state and lifecycle features through React Hooks, which we'll cover shortly.
+
+        </p>
+        <h3>React Functional Components</h3>
+        <p>React Functional components are JavaScript functions that return JSX elements. They are easy to understand and test, making them a preferred choice for most use cases.</p>
+        <p>Here's an example of a functional component:</p>
+		<!-- <div class="gray_sec">
+		<ul>
+		<li>OnInitialized and OnInitializedAsync: Called when the component is initialized.</li>
+		<li>OnParametersSet and OnParametersSetAsync: Invoked when component parameters are set.</li>
+		<li>OnAfterRender and OnAfterRenderAsync: Triggered after the component has rendered.</li>
+		<li>Dispose and DisposeAsync: These are called when the component is being destroyed.</li>
+		</ul>
+		</div> -->
+		<div class="code">
+		   <span class="skytxt">Function</span> <span>Welcome</span><span> (Props) </span><span>{</span><br>
+
+			<span class="skytxt">return</span><span class="redtext"><</span>h1<span class="redtext">></span>Hello, {props.name};  <span class="redtext"><</span>/h1<span class="redtext">></span><br/>
+
+		 <span class="">}</span><br/>
+         <span class="">export</span> <span class="skytxt">default</span> <span class="">Welcome</span>
+				<!-- <div class="ms-4">protected override void <span class="greentxt">OnInitialized</span><span class="graytext">()</span><br/>
+				<span class="graytext">{</span><br/>
+					<div class="ms-4">Console.<span class="greentxt">WriteLine("Greeting component initialized."</span><span class="graytext">);</span></div>
+				<span class="graytext">}</span></div>
+			<span class="graytext">}</span> -->
+		</div>
+		<p>In this example, Welcome is a functional component that takes a name prop (we will learn React Props later here) and renders a greeting message. .</p>
+        <p>export default Welcome; This line exports the Welcome component as the default export of this module. In a typical React project, you would have multiple components, and this line allows you to import and use the Welcome component in other parts of your application.</p>
+
+		
+		<h3>React Class Component</h3>
+        <p>React Class Components are the traditional way of creating components in React. They are defined as ES6 classes and extend the React.Component class. React Class Components have their own state and lifecycle methods.</p>
+        <p>Here's an example of a class component:</p>
+		<div class="code">
+            <span class="skytxt">class Welcome extends </span><span>React.Component {</span> <br>
+                <span class="greentxt">render</span><span>() {</span> <br>
+                    <span class="skytxt">return</span> <span class="redtext"><</span>h1<span class="redtext">></span>Hello, {this.props.name}<span class="redtext"><</span>/h1<span class="redtext">></span> <br>&nbsp; &nbsp; &nbsp; <span>}</span><br><span>}</span>
+		  
+		</div>
+        <p>In this code, Welcome is a class component that also renders a greeting message based on the name prop.
+
+        </p>
+        <h3>Choosing Between Functional Components and Class Components</h3>
+        <p>
+            With the introduction of React Hooks, React functional components have become the preferred choice for most developers due to their simplicity and flexibility. React Hooks allow functional components to manage state and perform side effects, which were previously exclusive to class components.
+        </p>
+        <h2>React State</h2>
+        <p>While react props are used for passing data from parent to child components, react state is used to manage data that can change within a component. React State allows a component to keep track of information and re-render when that information changes.</p>
+		<h2>React Props </h2>
+        <p>In React, you can pass data from a parent component to a React child component using React props. Props (short for properties) are a way to send information to child components, allowing them to display or manipulate that data.</p>
+        <p>Consider the following example</p>
+		<div class="code">
+            <span class="skytxt">function</span><span class="greentxt">Welcome</span> <span>(props) {</span> <br>
+              <span>return</span><span class="redtext"><</span>h1<span class="redtext">></span>Hello, {props.name}<span class="redtext"><</span>/h1<span class="redtext">>;</span><br>
+             &nbsp &nbsp <span>}</span> <br>
+             <span>const App = () => {</span><br>
+                <span>return;</span><br>
+                <span>}</span>
+		  
+		</div>
+		
+		<p>In this example, the Welcome component receives a name prop, which is set to "Alice" in the parent component (App). The Welcome component then displays a greeting message using this react prop.</p>
+        <p>React Props are read-only, meaning that child components should not modify the data passed through props. They are ideal for passing data that doesn't change within the component. </p>
+        <h2>React Hooks</h2>
+        <p>React Hooks are way to use state and different other React features in functional components. They were introduced in React 16.8 and have since become a popular way to manage state and side-effects in functional components.</p>
+        <p>React Hooks allow developers to "hook into" React state and lifecycle methods from React functional components, making it easier to manage complex logic and side-effects.</p>
+        <h3>React useState</h3>
+        <p>The useState hook allows us to add state to your functional components. We've already covered its usage in the counter example earlier.</p>
+        <h3>React useEffect</h3>
+        <p>useEffect is a React hook used for side effects in functional components, allowing you to perform actions like data fetching or DOM manipulation after rendering. It runs after each render and can also clean up resources when necessary.</p>
+		<h3>React useContext</h3>
+        <p>useContext allows you to access the Context API. It enables you to consume context values within a functional component.</p>
+        <h3>React useRef</h3>
+        <p>The useRef hook creates a mutable ref object that can hold reference to a DOM element or a value that persists across renders. It's commonly used for accessing and interacting with DOM elements directly.</p>
+        <h3>React useReducer</h3>
+        <p>useReducer is a hook that offers an alternative to useState when dealing with complex state logic. It's often used for managing state transitions in a more predictable manner, especially for state objects with multiple sub-values.</p>
+        <p>To learn more details about other React Hooks, visit React's official documentation. React's hook system is designed to be flexible and composable, allowing you to mix and match hooks to suit your specific needs. It's one of the reasons functional components have become the standard in modern React development.</p>
+        <h2>React Router</h2>
+        <p>In most web applications, you'll need to handle navigation between different views or pages. React Router is the go-to solution for adding routing to your React applications. It allows you to define routes and render different components based on the URL.</p>
+        <p>React Router also provides more advanced features like nested routes, route parameters, and route guards, allowing you to build complex navigation structures.</p>
+        <h2>React Forms</h2>
+        <p>Forms are a fundamental part of web applications, and React provides a straightforward way to handle user input using controlled components.
+
+        </p>
+        <p>In a controlled component, form elements like input, textarea, and select are bound to React state, and their values are controlled by React. This allows you to react to changes and validate user input easily.</p>
+        <h2>React Error Boundary </h2>
+        <p>React provides a feature called Error Boundaries to gracefully handle errors that occur during rendering, in lifecycle methods, or in constructors of any child component.</p>
+        <p>In React, error boundaries can be created using both class-based and function-based components (with hooks). If you're using a more modern React codebase, you might encounter error boundaries implemented as function components with the useErrorBoundary hook or the ErrorBoundary component from third-party libraries like react-error-boundary.</p>
+        <h2>React Suspense</h2>
+        <p>React Suspense is a feature that simplifies handling asynchronous operations and code-splitting in your React applications. It allows components to "suspend" rendering while waiting for data to load.</p>
+        <p>One of the most notable use cases of React Suspense is for loading data from a remote source.</p>
+        <h2>React State Management</h2>
+        <p>As your React applications grow in complexity, you may encounter challenges related to state management. While React provides local component states using useState and useReducer, you might need a more advanced state management solution for larger applications.</p>
+        <p>One popular state management library for React is Redux. Redux is predictable state container that helps you manage the state of your application in a centralized and predictable manner.</p>
+        <p>Redux is particularly useful when you need to share state between different parts of your application or manage complex data flows. It also offers a developer-friendly debugging experience through tools like Redux DevTools.</p>
+        <p>To use Redux, you'll need to install the redux and react-redux packages and set up actions, reducers, and a store. While it may seem complex at first, Redux provides a clear and organized way to manage the state of your application.</p>
+        
+        <h2>Getting Started with React</h2>
+        <p>Now that you have a foundational understanding of React, you may be wondering how to get started with your first React project. Here are the basic steps:</p>
+        <h3>Setting Up Your Development Environment - React with ASP.NET Core:</h3>
+        <p>Before you can start building React applications, you'll need to set up your development environment. Here are the key components:</p>
+        <ul>
+            <li>Node.js: React relies on Node.js for package management and development tools. You can download it from the official Node.js website.</li>
+            <li>Code Editor: Choose a code editor that you're comfortable with. Popular options include Visual Studio, Visual Studio Code, Sublime Text, and Atom. We will use Visual Studio 2022 for this short tutorial.</li>
+        </ul>
+        <p>Create React Application - React with ASP.NET Core </p>
+        <p>From the Start window, select Create a new project. <br>
+            Search for React, and then click on “Standalone JavaScript React Project” or “Standalone TypeScript React Project”, yes You can also use <br>
+            TypeScript instead of Javascript for building React applications! <br> 
+            Name the application. <br>
+            Now on the next window, if you want to build your application with ASP.NET Core Web API backend, check the “Add integration for Empty <br> 
+            ASP.NET Web API Project” option. <br> Click on Create now (It will take a moment to create the project). <br>
+            Click Build > Build Solution to build the project.  <br>
+            Press F5, After a command prompt, you should see the base React app in front of you!</p>
+            <h2>React Hosting</h2>
+            <p>After you've developed your React application, you'll need to host it on a web server so that users can access it online. While there are various hosting options available, including paid services and cloud platforms, ASPNETCORE.NET is one of the best and always free.<>
+                ASPNETCORE.NET is a hosting platform that provides services for hosting ASP.NET Core, React, Angular, and Vue.js applications.</p>
+		<div class="mt-3 pt-3 clearfix">
+			<h1>Summary</h1>
+			<img src="images/refi 2.png" class="img-fluid" alt="">
+			
+                In this comprehensive guide, we've covered the fundamentals of React, from JSX and components to React state management, routing, error handling, and state management using Redux. If you're interested in hosting your React application, ASPNETCORE.NET offers always free hosting plans for ASP.NET Core, React, Angular, and Vue.js applications. So, whether you're just starting your journey in web development or looking to enhance your skills React is an excellent choice that opens the door to building modern responsive and feature-rich web applications.
+		</div>
+		
+		
+	</div>
+</div>
+
+<!--
+:::::accordian Section
+-->
+<div id="inj" class="acc_area pb-5 blazor_faq">
+	<div class="container">		
+<h1>FAQs about React</h1>
+		<div class="row gx-5">
+			<div class="col-lg-6 sky_sec">
+				
+				<div class="accordion pt-0" id="accordionExample">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOn">
+					  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne">
+						What is React JS
+					  </button>
+					</h2>
+					<div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						React.js is an open-source JS library for building user interfaces
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo35">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo35" aria-expanded="false" aria-controls="collapseTwo35">
+                        What is React JS used for?
+					  </button>
+					</h2>
+					<div id="collapseTwo35" class="accordion-collapse collapse" aria-labelledby="headingTwo35" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						React is used for building reusable UI components and handling state changes in applications.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo34">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo34" aria-expanded="false" aria-controls="collapseTwo34">
+                        Why use React JS?
+					  </button>
+					</h2>
+					<div id="collapseTwo34" class="accordion-collapse collapse" aria-labelledby="headingTwo34" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						React is popular among web developers due to its efficient and reusable components, virtual DOM, and efficient update mechanism.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Do I need to learn JS before React?
+					  </button>
+					</h2>
+					<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						Yes, it's recommended to have a solid understanding of JavaScript and HTML/CSS before learning React.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					    How much JS before React?
+					  </button>
+					</h2>
+					<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+						A basic understanding of JS concepts such as variables, functions, loops, and objects is necessary.
+					  </div>
+					</div>
+				  </div>
+	
+					</div>
+			</div>
+
+			<div id="rt" class="col-lg-6 sky_sec">
+				  
+				<div class="accordion pt-0" id="accordionExample1">
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneone" aria-expanded="true" aria-controls="collapseOne1">
+                        Is React JS frontend or backend?
+					  </button>
+					</h2>
+					<div id="collapseOneone" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						React is primarily used for front-end development.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                        Can I learn React JS without knowing JavaScript?
+					  </button>
+					</h2>
+					<div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						It's possible, but not recommended. React is built on top of JS, so a solid understanding of the language is necessary to fully grasp its concepts.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingTwo22">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo22" aria-expanded="false" aria-controls="collapseTwo22">
+                        How to set default value in React JS?
+					  </button>
+					</h2>
+					<div id="collapseTwo22" class="accordion-collapse collapse" aria-labelledby="headingTwo22" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						You can set default values in React by using the default prop or by using a component's default state.
+					  </div>
+					</div>
+				  </div>
+				  <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree1">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+						What is a hook in React JS?
+					  </button>
+					</h2>
+					<div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						Hooks are special functions in React that allow you to "hook into" React state and lifecycle methods from functional components.
+					  </div>
+					</div>
+				  </div>
+				 
+				 <div class="accordion-item">
+					<h2 class="accordion-header" id="headingThree11">
+					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree11" aria-expanded="false" aria-controls="collapseThree11">
+						What is app.test.js in React? 
+					  </button>
+					</h2>
+					<div id="collapseThree11" class="accordion-collapse collapse" aria-labelledby="headingThree11" data-bs-parent="#accordionExample1">
+					  <div class="accordion-body">
+						app.test.js is a file used for testing React applications, typically written using Jest, a popular testing framework for React.
+					  </div>
+					</div>
+				  </div>
+
+				
+					</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div><a href="#"><img src="images/f-logo.png" class="img-fluid" alt=""></a></div>
+		<div class="pt-4 mt-4">
+			<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="about-us.html">About Us</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Contact </a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="copy">&copy; 2023 ASPNETCore.net</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="script.js"></script>
+<script>
+        $(function () { 
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo1.png');
+                }
+                if ($(this).scrollTop() < 20) { 
+                    $('.navbar-brand-img img').attr('src','images/logo.png');
+                }
+            })
+        });
+    </script>
+<script>
+$("#more1").click(function(){
+    $("#more1").hide();
+});
+$("#more2").click(function(){
+    $("#more2").hide();
+});
+$("#more3").click(function(){
+    $("#more3").hide();
+});
+</script>
+</body>
+</html>
