@@ -39,9 +39,9 @@ ul {
     margin: 0;
     padding: 0;
 }
-ul li {
+/* ul li {
     list-style: none;
-}
+} */
 .transition {
 	transition: 0.5s;
 }
@@ -101,6 +101,9 @@ header .navbar-brand {
 header nav ul.navbar-nav {
     align-items: center;
   	padding-right: 80px;
+}
+header nav ul li{
+	list-style: none;
 }
 header nav ul.navbar-nav li a {
 	font-weight: 500;
@@ -249,7 +252,21 @@ header .login .toggle::before {
 header.inner_banner.sticky .login {
 	top: 21px;
 }
-
+/* ul-text */
+.ul-text{
+	
+		display: block;
+		list-style-type: disc;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		padding-inline-start: 40px;
+	
+}
+.wel{
+	color: #d63384;;
+}
 
 /*----------------------------------------------
 :::::Banner Section

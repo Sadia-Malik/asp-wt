@@ -116,8 +116,7 @@
 					<h1>React: For Absolute Beginners</h1>
 					<div class="clearfix">
 						<img src="images/react-beg.png" class="img-fluid" alt="">
-						
-	<p>React is a JavaScript library for building user interfaces React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, Today, front-end frameworks and libraries are becoming an essential part of the modern web development stack. React.js is a front-end library that has gradually become the go-to framework for modern web development within the JavaScript community.</p>
+						<p>React, often stylized as React.js, is a powerful and widely used JavaScript library for building user interfaces (UIs). If you're just starting your journey in web development, you've probably heard about React.</p>
 
 					</div>
 				</div>
@@ -173,14 +172,22 @@
 
 <div class="code_area blazor_code">
 	<div class="container">
+		<h2>Why Use React?</h2>
+		<p>React offers several advantages that have contributed to its widespread adoption:</p>
+		<h3>Declarative Syntax:</h3>
+		<p>React utilizes a declarative syntax, making it easier to describe how your UI should look based on its state. This makes code more predictable and readable.</p>
+		<h3>React Native:</h3>
+		<p>React can be used to build not only web applications but also mobile apps using React Native. This allows for code sharing between web and mobile platforms.</p>
+		<h3>Large Ecosystem:</h3>
+		<p>React has vast ecosystem of libraries and tools, including Redux for state management, React Router for routing, and many others. This ecosystem simplifies the development process and offers solutions to common challenges.</p>
 	    <h2>JSX</h2>
 		<p>One of the defining features of React is JSX, which stands for JavaScript XML. JSX is a syntax-extension for JavaScript that allows us to write HTML like code within your JavaScript files. This syntax makes it easier to define and render UI components.</p>
-        <p>Here's a simple example of JSX</p>
+        <p>Here's a simple example of JSX:</p>
 		
 		<div class="code">
-			 <span class="skytxt">const</span> <span>element</span>
+			 <span class="skytxt">const</span> <span>element</span> <span class="redtext">=</span>
 
-			<span class="redtext"><</span>h1<span class="redtext">></span>Hello, React <span class="redtext">!<</span>/h1<span class="redtext">></span>
+			<span class="redtext"><</span>h1<span class="redtext">></span>Hello, &nbsp; React <span class="redtext">!<</span>/h1<span class="redtext">> ;</span>
 	
 		</div>
 		<p>In this code snippet, we define a variable element that contains JSX code. This JSX code represents an HTML element with the text "Hello, React!".</p>
@@ -202,20 +209,20 @@
 		</ul>
 		</div> -->
 		<div class="code">
-		   <span class="skytxt">Function</span> <span>Welcome</span><span> (Props) </span><span>{</span><br>
+		   <span class="skytxt">Function</span> <span class="greentxt">Welcome</span><span> (Props) </span>  &nbsp;<span>{</span><br>
 
-			<span class="skytxt">return</span><span class="redtext"><</span>h1<span class="redtext">></span>Hello, {props.name};  <span class="redtext"><</span>/h1<span class="redtext">></span><br/>
+			 &nbsp; &nbsp;<span class="skytxt">return</span><span class="redtext"><</span>h1<span class="redtext">></span>Hello, {props.name}  <span class="redtext"><</span>/h1<span class="redtext">> ;</span><br/>
 
 		 <span class="">}</span><br/>
-         <span class="">export</span> <span class="skytxt">default</span> <span class="">Welcome</span>
+         <span class="">export</span> <span class="skytxt">default</span> <span class="">Welcome ;</span>
 				<!-- <div class="ms-4">protected override void <span class="greentxt">OnInitialized</span><span class="graytext">()</span><br/>
 				<span class="graytext">{</span><br/>
 					<div class="ms-4">Console.<span class="greentxt">WriteLine("Greeting component initialized."</span><span class="graytext">);</span></div>
 				<span class="graytext">}</span></div>
 			<span class="graytext">}</span> -->
 		</div>
-		<p>In this example, Welcome is a functional component that takes a name prop (we will learn React Props later here) and renders a greeting message. .</p>
-        <p>export default Welcome; This line exports the Welcome component as the default export of this module. In a typical React project, you would have multiple components, and this line allows you to import and use the Welcome component in other parts of your application.</p>
+		<p>In this example, Welcome is a functional component that takes a name prop (we will learn React Props later here) and renders a greeting message.</p>
+        <p><span class="wel">export default Welcome;</span> This line exports the Welcome component as the default export of this module. In a typical React project, you would have multiple components, and this line allows you to import and use the Welcome component in other parts of your application.</p>
 
 		
 		<h3>React Class Component</h3>
@@ -223,8 +230,8 @@
         <p>Here's an example of a class component:</p>
 		<div class="code">
             <span class="skytxt">class Welcome extends </span><span>React.Component {</span> <br>
-                <span class="greentxt">render</span><span>() {</span> <br>
-                    <span class="skytxt">return</span> <span class="redtext"><</span>h1<span class="redtext">></span>Hello, {this.props.name}<span class="redtext"><</span>/h1<span class="redtext">></span> <br>&nbsp; &nbsp; &nbsp; <span>}</span><br><span>}</span>
+                &nbsp; &nbsp;<span class="greentxt">render</span><span>() {</span> <br>
+                    &nbsp; &nbsp; &nbsp; <span class="skytxt">return</span> <span class="redtext"><</span>h1<span class="redtext">></span>Hello, &nbsp; {<span class="skytxt">this</span>.props.name}<span class="redtext"><</span>/h1<span class="redtext">> ;</span> <br>&nbsp; &nbsp; &nbsp; <span>}</span><br><span>}</span>
 		  
 		</div>
         <p>In this code, Welcome is a class component that also renders a greeting message based on the name prop.
@@ -234,24 +241,27 @@
         <p>
             With the introduction of React Hooks, React functional components have become the preferred choice for most developers due to their simplicity and flexibility. React Hooks allow functional components to manage state and perform side effects, which were previously exclusive to class components.
         </p>
-        <h2>React State</h2>
-        <p>While react props are used for passing data from parent to child components, react state is used to manage data that can change within a component. React State allows a component to keep track of information and re-render when that information changes.</p>
-		<h2>React Props </h2>
+		<p>
+			Now, let's explore some key concepts and features of React that will help you understand how to build more complex applications.
+		</p>
+        <h2>React Props </h2>
         <p>In React, you can pass data from a parent component to a React child component using React props. Props (short for properties) are a way to send information to child components, allowing them to display or manipulate that data.</p>
-        <p>Consider the following example</p>
+        <p>Consider the following example:</p>
 		<div class="code">
-            <span class="skytxt">function</span><span class="greentxt">Welcome</span> <span>(props) {</span> <br>
-              <span>return</span><span class="redtext"><</span>h1<span class="redtext">></span>Hello, {props.name}<span class="redtext"><</span>/h1<span class="redtext">>;</span><br>
-             &nbsp &nbsp <span>}</span> <br>
-             <span>const App = () => {</span><br>
-                <span>return;</span><br>
-                <span>}</span>
+            <span class="skytxt">function</span>  <span class="greentxt">Welcome</span> <span>(props) {</span> <br>
+              &nbsp; &nbsp;<span class="skytxt">return</span>  <span class="redtext"><</span>h1<span class="redtext">></span>Hello, &nbsp; {props.name}<span class="redtext"><</span>/h1<span class="redtext">>;</span><br>
+             <span>}</span> <br> <br>
+             <span class="skytxt">const</span><span> App <span class="redtext"> = </span> () <span class="redtext"> => </span> {</span><br>
+                <span>return</span>  <span class="redtext"><</span> <span class="skytxt">Welcome</span> name <span class="redtext">=</span> <span class="greentxt">"Alice"</span> <span class="redtext">/></span> ;<br>
+                <span>} ;</span>
 		  
 		</div>
 		
 		<p>In this example, the Welcome component receives a name prop, which is set to "Alice" in the parent component (App). The Welcome component then displays a greeting message using this react prop.</p>
         <p>React Props are read-only, meaning that child components should not modify the data passed through props. They are ideal for passing data that doesn't change within the component. </p>
-        <h2>React Hooks</h2>
+		<h2>React State</h2>
+        <p>While react props are used for passing data from parent to child components, react state is used to manage data that can change within a component. React State allows a component to keep track of information and re-render when that information changes.</p>
+		<h2>React Hooks</h2>
         <p>React Hooks are way to use state and different other React features in functional components. They were introduced in React 16.8 and have since become a popular way to manage state and side-effects in functional components.</p>
         <p>React Hooks allow developers to "hook into" React state and lifecycle methods from React functional components, making it easier to manage complex logic and side-effects.</p>
         <h3>React useState</h3>
@@ -264,7 +274,7 @@
         <p>The useRef hook creates a mutable ref object that can hold reference to a DOM element or a value that persists across renders. It's commonly used for accessing and interacting with DOM elements directly.</p>
         <h3>React useReducer</h3>
         <p>useReducer is a hook that offers an alternative to useState when dealing with complex state logic. It's often used for managing state transitions in a more predictable manner, especially for state objects with multiple sub-values.</p>
-        <p>To learn more details about other React Hooks, visit React's official documentation. React's hook system is designed to be flexible and composable, allowing you to mix and match hooks to suit your specific needs. It's one of the reasons functional components have become the standard in modern React development.</p>
+        <p>To learn more details about other React Hooks, visit <a href="https://react.dev/reference/react" target="_blank">React's official documentation</a>. React's hook system is designed to be flexible and composable, allowing you to mix and match hooks to suit your specific needs. It's one of the reasons functional components have become the standard in modern React development.</p>
         <h2>React Router</h2>
         <p>In most web applications, you'll need to handle navigation between different views or pages. React Router is the go-to solution for adding routing to your React applications. It allows you to define routes and render different components based on the URL.</p>
         <p>React Router also provides more advanced features like nested routes, route parameters, and route guards, allowing you to build complex navigation structures.</p>
@@ -289,11 +299,11 @@
         <p>Now that you have a foundational understanding of React, you may be wondering how to get started with your first React project. Here are the basic steps:</p>
         <h3>Setting Up Your Development Environment - React with ASP.NET Core:</h3>
         <p>Before you can start building React applications, you'll need to set up your development environment. Here are the key components:</p>
-        <ul>
-            <li>Node.js: React relies on Node.js for package management and development tools. You can download it from the official Node.js website.</li>
+        <ul class="ul-text">
+            <li>Node.js: React relies on Node.js for package management and development tools. You can download it from the official <a href="https://nodejs.org/en/download" target="_blank">Node.js website</a>.</li>
             <li>Code Editor: Choose a code editor that you're comfortable with. Popular options include Visual Studio, Visual Studio Code, Sublime Text, and Atom. We will use Visual Studio 2022 for this short tutorial.</li>
         </ul>
-        <p>Create React Application - React with ASP.NET Core </p>
+        <h3>Create React Application - React with ASP.NET Core </h3>
         <p>From the Start window, select Create a new project. <br>
             Search for React, and then click on “Standalone JavaScript React Project” or “Standalone TypeScript React Project”, yes You can also use <br>
             TypeScript instead of Javascript for building React applications! <br> 
@@ -303,13 +313,13 @@
             Click Build > Build Solution to build the project.  <br>
             Press F5, After a command prompt, you should see the base React app in front of you!</p>
             <h2>React Hosting</h2>
-            <p>After you've developed your React application, you'll need to host it on a web server so that users can access it online. While there are various hosting options available, including paid services and cloud platforms, ASPNETCORE.NET is one of the best and always free.<>
-                ASPNETCORE.NET is a hosting platform that provides services for hosting ASP.NET Core, React, Angular, and Vue.js applications.</p>
+            <p>After you've developed your React application, you'll need to host it on a web server so that users can access it online. While there are various hosting options available, including paid services and cloud platforms, <a href="http://aspnetcore.net/">ASPNETCORE.NET</a> is one of the best and always free.</p>
+              <p><a href="http://aspnetcore.net/">ASPNETCORE.NET</a> is a hosting platform that provides services for hosting ASP.NET Core, React, Angular, and Vue.js applications.</p>
 		<div class="mt-3 pt-3 clearfix">
 			<h1>Summary</h1>
 			<img src="images/react-summary.png" class="img-fluid" alt="">
 			
-                In this comprehensive guide, we've covered the fundamentals of React, from JSX and components to React state management, routing, error handling, and state management using Redux. If you're interested in hosting your React application, ASPNETCORE.NET offers always free hosting plans for ASP.NET Core, React, Angular, and Vue.js applications. So, whether you're just starting your journey in web development or looking to enhance your skills React is an excellent choice that opens the door to building modern responsive and feature-rich web applications.
+                In this comprehensive guide, we've covered the fundamentals of React, from JSX and components to React state management, routing, error handling, and state management using Redux. If you're interested in hosting your React application, <a href="http://aspnetcore.net/">ASPNETCORE.NET</a> offers always free hosting plans for ASP.NET Core, React, Angular, and Vue.js applications. So, whether you're just starting your journey in web development or looking to enhance your skills React is an excellent choice that opens the door to building modern responsive and feature-rich web applications.
 		</div>
 		
 		
